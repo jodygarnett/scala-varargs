@@ -1,5 +1,7 @@
 package com.github.jnh5y;
 
+import java.util.List;
+
 public class MyJavaClass {
     public static void arrayFunction(Object[] input) {
         System.out.println("Called arrayFunction with " + input.length + " inputs.");
@@ -12,6 +14,14 @@ public class MyJavaClass {
         System.out.println("Called varargsFunction with " + input.length + " inputs.");
         for (int i = 0; i < input.length; i++) {
             System.out.println("  Object " + i + ":" + input[i]);
+        }
+    }
+
+    // NB: This function is used.
+    public static void varargsFunction(List<Object> input) {
+        System.out.println("Called varargsFunction with " + input.size() + " inputs.");
+        for (int i = 0; i < input.size(); i++) {
+            System.out.println("  Object " + i + ":" + input.get(i));
         }
     }
 
