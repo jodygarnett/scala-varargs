@@ -40,7 +40,7 @@ class VarArgsTest extends Specification {
       // MyJavaClass.varargsFunctionInteger(integers)
       // will not compile!
       // This means that the change from Integer[] -> Integer... will surface as a compiler error.
-      MyJavaClass.function(integers: _*)
+      // MyJavaClass.function(integers: _*)
 
       ok
     }
