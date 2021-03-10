@@ -16,12 +16,12 @@ class VarArgsTest extends Specification {
       // Called arrayFunction with 2 inputs.
       //  Object 0:foo
       //  Object 1:1
-      MyJavaClass.arrayFunction(objects)
+      MyJavaClass.function(objects)
 
       // Prints:
       // Called varargsFunction with 1 inputs.
       //  Object 0:[Ljava.lang.Object;@6b12d449
-      MyJavaClass.varargsFunction(objects)
+      MyJavaClass.function(objects)
 
       ok
     }
@@ -34,13 +34,13 @@ class VarArgsTest extends Specification {
       //  Object 0:1
       //  Object 1:5
 
-      MyJavaClass.arrayFunctionInteger(integers)
+      MyJavaClass.function(integers)
 
       // Note that
       // MyJavaClass.varargsFunctionInteger(integers)
       // will not compile!
       // This means that the change from Integer[] -> Integer... will surface as a compiler error.
-      MyJavaClass.varargsFunctionInteger(integers: _*)
+      MyJavaClass.function(integers: _*)
 
       ok
     }
